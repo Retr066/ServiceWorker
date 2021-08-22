@@ -1,0 +1,230 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    background: #8DDBE0;
+}
+.container__global{
+    display: flex;
+    height: 100vh;
+    justify-items: center;
+}
+.container{
+    display: flex;
+    height: 25rem;
+    width: 40rem;
+    flex-direction: column;
+    align-items: center;
+    background:#2A4849;
+    border: 2px solid #426B69; 
+    border-radius: 20px;
+    margin: auto;
+}
+#formProfile{
+    display: flex;
+    height: 25rem;
+    width: 40rem;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.container__title{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    height:50%;
+    text-align: center;
+}
+.title{
+    font-size:2.5em;
+    margin-bottom: 0;
+    color: #00FFCD;
+}
+.title:hover{
+    color: #02b18e;
+}
+.span{
+    font-size: 1.5em;
+    font-style: italic;
+    color:#DBD3D8;
+}
+.span:hover{
+    color: #a5a2a4;
+}
+.container__name{
+    display: flex;
+    align-items: center;
+}
+.span-alert{
+    color: #a01313;
+    justify-content:center;
+    display: flex;
+    font-style: italic;
+}
+.hidden{
+    display: none !important;
+}
+
+.input-name{
+    margin-left: 1rem;
+    font-style: italic;
+    text-align: center;
+    outline: none;
+    background:rgba(0, 0, 0, 0.178);
+    border: 0;
+    width: 250px;
+    height:30px;
+    color: #DBD3D8;
+    font-size: 1.2em;
+    border-bottom: 2px solid #00FFCD;
+}
+.container__button{
+    display: flex;
+    flex-direction: column;
+    height:40%;
+    justify-content: center;
+}
+.button{
+    background:#00FFCD;
+    font-size:1.1em;
+    color: #2A4849;
+    padding:10px 30px;
+    border-style: none;
+    border-radius: 10px;
+    animation: buttonClickme;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    cursor: pointer;
+}
+.button:hover{
+    background:#02b38f;
+    color: #193335;
+}
+.button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #8DDBE0;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 2s infinite;
+  }
+
+
+@media (max-width: 400px) { 
+    .container__name{
+        display: flex;
+        flex-direction: column;
+    }
+    .input-name{
+        margin-top: 1rem;
+        margin-left: 0px;
+    }
+}
+@keyframes buttonClickme{
+    40% { transform: rotate(15deg); }
+    80% { transform: rotate(-15deg); }
+}
+
+@keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 200px;
+      height: 200px;
+      opacity: 0;
+    }
+  }
+
+.container__chats{
+    display: flex;
+    overflow-x: auto;
+    flex-direction: column;
+    height: 88%;
+    padding: 10px 10px 0 10px;
+}
+.container__chat-sender{
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   margin: 5px 0;
+}
+.container__flex-sender{
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    justify-content: flex-end;
+    background: #426B69 ;
+    border-radius: 10px;
+}
+
+.profile-span{
+    display: flex;
+    justify-content:flex-end;
+    color:#DBD3D8;
+    font-size:0.9em;
+    font-style: italic;
+    margin: 0px 10px;
+}
+.chat-message{
+    color:#DBD3D8;
+    padding: 8px;
+}
+.container__chat-transmitter{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px 0;
+}
+.container__flex-transmitter{
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    background: #071312 ;
+    border-radius: 10px;
+}
+.profile-span-transmitter{
+    display: flex;
+    justify-content:flex-start;
+    color:#DBD3D8;
+    font-size:0.9em;
+    font-style: italic;
+    margin: 0px 10px;
+}
+.container__button-chat{
+    display: flex;
+    width: 97%;
+    height: 10%;
+}
+.chat-input{
+    width: 97%;
+    text-align: center;
+    outline: none;
+    background:rgba(0, 0, 0, 0.178);
+    border: 0;
+    color: #DBD3D8;
+    font-size: 1.2em;
+    border-bottom: 2px solid #00FFCD;
+}
+.container__chatAlert{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 85%;
+}
+.chat-button{
+    width: 15%;
+    background:#00FFCD;
+    font-size:1.1em;
+    color: #2A4849;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
