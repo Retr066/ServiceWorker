@@ -27,6 +27,7 @@ export default class Model {
           reject(event.data.error);
         } else {
           resolve(event.data);
+          console.log(event.data);
         }
       };
     });

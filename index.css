@@ -148,6 +148,7 @@ body{
     overflow-x: auto;
     flex-direction: column;
     height: 88%;
+    width: 90%;
     padding: 10px 10px 0 10px;
 }
 .container__chat-sender{
